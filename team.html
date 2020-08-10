@@ -48,23 +48,27 @@
     <style>
         .card {
             display: grid;
-            grid-template-columns: 300px;
-            grid-template-rows: 258px 248px 0px;
+            grid-template-columns: 250px;
+            grid-template-rows: 200px 290px 0px;
             grid-template-areas: "image" "text" "stats";
             border-radius: 18px;
             background: rgba(91, 153, 211, 1);
             /* box-shadow: 5px 5px 15px rgba(0,0,0,0.7); */
             font-family: roboto;
             text-align: center;
-            width: 300px;
+            width: 250px;
             
             transition: 0.5s ease;
             cursor: pointer;
             margin: auto;
             }
 
-        .card-image {
-            grid-area: image;
+        .card-image{
+            background: url("images/team/anonymous-man.jpg");
+        }
+
+        .card1 {
+            background: url("images/team/S.Khouida.png");
         }
         .card-text {
             grid-area: text;
@@ -72,7 +76,7 @@
 
         .card-image {
             grid-area: image;
-            background: url("images/team/S.Khouida.jpg");
+            opacity: 0.9;
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
             background-size: cover;
@@ -94,6 +98,12 @@
             font-size:28px;
         }
 
+        .card-text span {
+            color: #2f3542;
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+
         .card:hover {
             transform: scale(1.05);
             /* box-shadow: 5px 5px 15px rgba(0,0,0,0.6); */
@@ -101,7 +111,6 @@
         }
 
         .item {
-            margin-right: 50px;
             margin-top: 20px;
         }
 
@@ -149,7 +158,7 @@
                                 <div class="info-box">
                                     <span class="info-icon"><i class="fa fa-compass">&nbsp;</i></span>
                                     <div class="info-box-content">
-                                        <p class="info-box-title">9.00 - 18.00 </p>
+                                        <p class="info-box-title">8.30 - 18.00 </p>
                                         <p class="info-box-subtitle">Lundi au Vendredi </p>
                                     </div>
                                 </div>
@@ -226,10 +235,10 @@
 
                     <div class="item col-md-3 col-sm-5 text-center">
                         <div class="card">
-                            <div class="card-image"></div>
+                            <div class="card-image card1"></div>
                             <div class="card-text">
-                              <h3>S.KHOUIDA</h3>
-                              <p>Global Manager</p>
+                              <h3>S.KHOUIDA</h3><br>
+                              <p><span>Global Manager</span></p>
                               <p>Ingénieur d’état en Environnement et Sécurité Industriels de l’ENIM / Consultants Senior / formateur en QHSE</p>
                             </div>
                           </div>
@@ -239,9 +248,9 @@
                         <div class="card">
                             <div class="card-image"></div>
                             <div class="card-text">
-                                <h3>S.KHOUIDA</h3>
-                                <p>Global Manager</p>
-                                <p>Ingénieur d’état en Environnement et Sécurité Industriels de l’ENIM / Consultants Senior / formateur en QHSE</p>
+                                <h3>M. EL JAOUARIH</h3>
+                                <p><span>Manager QHSE</span></p>
+                                <p>Ingénieur d’état en Environnement et Sécurité Industriels de l’ENIM / Consultant Senior / formateur en QHSE / Spécialiste en VLR</p>
                               </div>
                           </div>
                     </div><!-- Team 2 end -->
@@ -250,9 +259,8 @@
                         <div class="card">
                             <div class="card-image"></div>
                             <div class="card-text">
-                                <h3>S.KHOUIDA</h3>
-                                <p>Global Manager</p>
-                                <p>Ingénieur d’état en Environnement et Sécurité Industriels de l’ENIM / Consultants Senior / formateur en QHSE</p>
+                                <h3>N. OULED BOUYAHYA</h3>
+                                <p><span>Responsible Financier</span></p>
                               </div>
                           </div>
                     </div><!-- Team 3 end -->
@@ -261,34 +269,11 @@
                         <div class="card">
                             <div class="card-image"></div>
                             <div class="card-text">
-                                <h3>S.KHOUIDA</h3>
-                                <p>Global Manager</p>
-                                <p>Ingénieur d’état en Environnement et Sécurité Industriels de l’ENIM / Consultants Senior / formateur en QHSE</p>
+                                <h3>S. SEFFAR</h3><br>
+                                <p><span>Responsible Administrative</span></p>
                               </div>
                           </div>
                     </div><!-- Team 4 end -->
-
-                    <div class="item col-md-3 col-sm-5 text-center">
-                        <div class="card">
-                            <div class="card-image"></div>
-                            <div class="card-text">
-                                <h3>S.KHOUIDA</h3>
-                                <p>Global Manager</p>
-                                <p>Ingénieur d’état en Environnement et Sécurité Industriels de l’ENIM / Consultants Senior / formateur en QHSE</p>
-                              </div>
-                          </div>
-                    </div><!-- Team 5 end -->
-
-                    <div class="item col-md-3 col-sm-5 text-center">
-                        <div class="card">
-                            <div class="card-image"></div>
-                            <div class="card-text">
-                                <h3>S.KHOUIDA</h3>
-                                <p>Global Manager</p>
-                                <p>Ingénieur d’état en Environnement et Sécurité Industriels de l’ENIM / Consultants Senior / formateur en QHSE</p>
-                              </div>
-                          </div>
-                    </div><!-- Team 6 end -->
 
                     
                     <!-- Team slide end -->
@@ -308,7 +293,7 @@
 
                         <p> <strong> GLOBAL SAFETY CONSULTING</strong> est un bet et conseil marocain spécialisé dans les études, l'ingénierie, le conseil, l'audit et la formation et ce dans les domaines de la qualité, l'hygiène, la sécurité, l'environnement, le développement durable et les énergies renouvelables à l'échelle nationale et internationale.</p>
                         <p>Nous accompagnons nos clients dans les démarches relatives aux normes et standards Internationaux à savoir ISO 9001, ISO 14001, ISO 45001, ISO 50001, ISO 22000, FSSC, 22000 NFPA, FM GLOBAL, APSAD, OHSHA ...</p>
-                        <p><strong>Lun/Ven</strong> 9.00 - 13.00 / 14.00 - 18.00</p>
+                        <p><strong>Lun/Ven</strong> 8.30 - 13.00 / 14.00 - 18.00</p>
                     </div><!-- About us end -->
 
                     <div class="col-md-4 col-sm-12 footer-widget">
