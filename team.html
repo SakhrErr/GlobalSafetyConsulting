@@ -49,7 +49,7 @@
         .card {
             display: grid;
             grid-template-columns: 250px;
-            grid-template-rows: 200px 290px 0px;
+            grid-template-rows: 200px 237px 0px;
             grid-template-areas: "image" "text" "stats";
             border-radius: 18px;
             background: rgba(91, 153, 211, 1);
@@ -199,6 +199,10 @@
                                         <a href="nosReferences.html"> Nos références </a>
                                     </li>
 
+                                    <li class="menu-item ">
+                                        <a href="certifications.html"> Certifications </a>
+                                    </li>
+
                                     <li class="menu-item active">
                                         <a href="team.html">Notre équipe </a>
                                     </li>
@@ -226,7 +230,7 @@
                 <div class="row text-center">
                     <h2 class="title">
                         Nos principaux consultants opérants dans tous les secteurs d’activités
-                        <span class="title-head">Rencontrez notre équipe</span>
+                        <span class="title-head">Rencontrez nos piliers</span>
                     </h2>
                 </div><!--/ Title row end -->
 
@@ -239,7 +243,7 @@
                             <div class="card-text">
                               <h3>S.KHOUIDA</h3><br>
                               <p><span>Global Manager</span></p>
-                              <p>Ingénieur d’état en Environnement et Sécurité Industriels de l’ENIM / Consultants Senior / formateur en QHSE</p>
+                              <p class="card-description" style="display: none;">Ingénieur d’état en Environnement et Sécurité Industriels de l’ENIM / Consultants Senior / formateur en QHSE</p>
                             </div>
                           </div>
                     </div><!-- Team 1 end -->
@@ -250,7 +254,7 @@
                             <div class="card-text">
                                 <h3>M. EL JAOUARIH</h3>
                                 <p><span>Manager QHSE</span></p>
-                                <p>Ingénieur d’état en Environnement et Sécurité Industriels de l’ENIM / Consultant Senior / formateur en QHSE / Spécialiste en VLR</p>
+                                <p class="card-description" style="display: none;">Ingénieur d’état en Environnement et Sécurité Industriels de l’ENIM / Consultant Senior / formateur en QHSE / Spécialiste en VLR</p>
                               </div>
                           </div>
                     </div><!-- Team 2 end -->
@@ -415,7 +419,25 @@
 			    });
 			    $(this).addClass("active");
 			});
-		});
+        });
+        
+        const cards = document.getElementsByClassName('card');
+        for(let i = 0; i < 2; i++){
+            cards[i].addEventListener('click', (e)=> {
+                document.getElementsByClassName('card-description')[i].style.display = '';
+                for(let j = 0; j < 4; j++){
+                    cards[j].style.gridTemplateRows = '200px 290px 0px';
+                }
+                // cards[i].style.gridTemplateRows = '200px 290px 0px';
+            })
+
+            cards[i].addEventListener('mouseleave', (e)=> {
+                document.getElementsByClassName('card-description')[i].style.display = 'none';
+                for(let j = 0; j < 4; j++){
+                    cards[j].style.gridTemplateRows = '200px 237px 0px';
+                }
+            })
+        }
 		</script>
 </body>
 </html>
