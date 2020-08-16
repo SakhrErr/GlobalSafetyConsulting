@@ -667,7 +667,7 @@ h5{
 
 .navbar-fixed {
   z-index: 99999;
-  position: fixed;
+  /* position: fixed; */
   opacity: .98;
   width: 100%;
   top: 0;
