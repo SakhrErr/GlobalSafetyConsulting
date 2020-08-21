@@ -352,12 +352,12 @@ cite {
 
 
 .list-round-arrow li:before {
-   content: url(../images/favicon/favicon-13x13.png);
+   content: url(../images/favicon/favicon-10x10.png);
    margin-right: 5px;
 }
 
 .list-round-arrow li {
-   font-size: 1.7rem;
+   font-size: 1.2rem;
    font-weight: 500;
    line-height: 2.5rem;
    margin-bottom: 15px;
@@ -1697,6 +1697,11 @@ ul.navbar-nav > li > a i{
 
 .featured-tab .tab-icon i {
     font-size: 230px;
+}
+
+.featured-tab-area .pull-right {
+   width: 35%;
+   padding-left: 20px;
 }
 
 
