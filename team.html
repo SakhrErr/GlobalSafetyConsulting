@@ -49,7 +49,7 @@
         .card {
             display: grid;
             grid-template-columns: 250px;
-            grid-template-rows: 200px 237px 0px;
+            grid-template-rows: 200px 260px 0px;
             grid-template-areas: "image" "text" "stats";
             border-radius: 18px;
             background: rgba(91, 153, 211, 1);
@@ -112,6 +112,15 @@
 
         .item {
             margin-top: 20px;
+        }
+
+        .item .card-description{
+            font-family: 'Roboto Mono', sans-serif;
+            /* color: rgba(0, 0, 0, 0.5); */
+            color: #3c40c6;
+            font-size: 1.5rem;
+            font-style: italic;
+            font-weight: 500;
         }
 
         /* @media (min-width: 1198px){
@@ -243,7 +252,7 @@
                             <div class="card-text">
                               <h3>S.KHOUIDA</h3><br>
                               <p><span>Global Manager</span></p>
-                              <p class="card-description" style="display: none;">Ingénieur d’état en Environnement et Sécurité Industriels de l’ENIM / Consultants Senior / formateur en QHSE</p>
+                              <p class="card-description" style="display: none;">“Je n'ai pas d'idoles. J'admire le travail, le dévouement et la compétence”</p>
                             </div>
                           </div>
                     </div><!-- Team 1 end -->
@@ -254,7 +263,7 @@
                             <div class="card-text">
                                 <h3>M. EL JAOUARIH</h3>
                                 <p><span>Manager QHSE</span></p>
-                                <p class="card-description" style="display: none;">Ingénieur d’état en Environnement et Sécurité Industriels de l’ENIM / Consultant Senior / formateur en QHSE / Spécialiste en VLR</p>
+                                <p class="card-description" style="display: none;">“La confiance en soi ne remplace pas la compétence.”</p>
                               </div>
                           </div>
                     </div><!-- Team 2 end -->
@@ -265,6 +274,7 @@
                             <div class="card-text">
                                 <h3>N. OULED BOUYAHYA</h3>
                                 <p><span>Responsible Financier</span></p>
+                                <p class="card-description" style="display: none;">“L'art de la réussite consiste à savoir s'entourer des meilleurs.”</p>
                               </div>
                           </div>
                     </div><!-- Team 3 end -->
@@ -275,6 +285,7 @@
                             <div class="card-text">
                                 <h3>S. SEFFAR</h3><br>
                                 <p><span>Responsible Administrative</span></p>
+                                <p class="card-description" style="display: none;">“Ce qui est bon pour nos clients l'est aussi pour nous.”</p>
                               </div>
                           </div>
                     </div><!-- Team 4 end -->
@@ -420,24 +431,19 @@
 			    $(this).addClass("active");
 			});
         });
-        
-        const cards = document.getElementsByClassName('card');
-        for(let i = 0; i < 2; i++){
-            cards[i].addEventListener('click', (e)=> {
-                document.getElementsByClassName('card-description')[i].style.display = '';
-                for(let j = 0; j < 4; j++){
-                    cards[j].style.gridTemplateRows = '200px 290px 0px';
-                }
-                // cards[i].style.gridTemplateRows = '200px 290px 0px';
-            })
-
-            cards[i].addEventListener('mouseleave', (e)=> {
-                document.getElementsByClassName('card-description')[i].style.display = 'none';
-                for(let j = 0; j < 4; j++){
-                    cards[j].style.gridTemplateRows = '200px 237px 0px';
-                }
-            })
+    </script>
+    <script>
+        const cards = document.getElementsByClassName('card-description');
+        const items = document.getElementsByClassName('item');
+        for(let i = 0; i < items.length ; i++){
+            items[i].addEventListener('mouseover', () => {
+                cards[i].removeAttribute('style');
+            });
+            items[i].addEventListener('mouseleave', () => {
+                cards[i].style.display = 'none';
+                cards[i].style.color = 'white';
+            });
         }
-		</script>
+    </script>
 </body>
 </html>
