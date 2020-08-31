@@ -1699,11 +1699,12 @@ ul.navbar-nav > li > a i{
     font-size: 230px;
 }
 
-.featured-tab-area .pull-right {
+@media (min-width : 648px){
+   .featured-tab-area .pull-right {
    width: 35%;
    padding-left: 20px;
+   }
 }
-
 
 /* Content area
 ================================================== */
@@ -3451,3 +3452,125 @@ h4.panel-title a.collapsed:before {
    margin-right: 10px;
 }
 
+.owl-dots{
+   display: none;
+}
+.owl-nav span{
+   font-size: 5rem;
+}
+
+#owl-carousel img, .swiper-slide img {
+   height: 160px;
+   width: 220px;
+   margin: auto;
+}
+
+
+.swiper-container {
+   margin-top: 50px;
+}
+
+.swiper-wrapper{
+   width: 50%;
+   margin: auto;
+}
+
+.references-slider{
+   margin-top: 80px;
+   background: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 400px) {
+   #owl-carousel img, .swiper-slide img {
+       padding-right: 80px !important;
+   }
+}
+
+.Certifications img {
+   margin-bottom: 20px;
+}
+.Certifications img:hover {
+   transform: scale(1.1);
+   transition-duration: 700ms;
+}
+
+/*  */
+.team .card {
+   display: grid;
+   grid-template-columns: 250px;
+   grid-template-rows: 200px 260px 0px;
+   grid-template-areas: "image" "text" "stats";
+   border-radius: 18px;
+   background: rgba(91, 153, 211, 1);
+   /* box-shadow: 5px 5px 15px rgba(0,0,0,0.7); */
+   font-family: roboto;
+   text-align: center;
+   width: 250px;
+   
+   transition: 0.5s ease;
+   cursor: pointer;
+   margin: auto;
+   }
+
+.team .card-image{
+   background: url("../images/team/anonymous-man.png");
+}
+
+.team .card1 {
+   background: url("../images/team/S.Khouida.png");
+}
+.team .card-text {
+   grid-area: text;
+}
+
+.team .card-image {
+   grid-area: image;
+   opacity: 0.9;
+   border-top-left-radius: 15px;
+   border-top-right-radius: 15px;
+   background-size: cover;
+}
+
+.team .card-text {
+   grid-area: text;
+   margin: 25px;
+}
+
+.team .card-text p {
+   color: rgba(58, 58, 58, 0.6);
+   font-size:15px;
+   font-weight: 300;
+}
+
+.team .card-text h2 {
+   margin-top:0px;
+   font-size:28px;
+}
+
+.team .card-text span {
+   color: #2f3542;
+   font-size: 1.6rem;
+   font-weight: 500;
+}
+
+.team .card:hover {
+   transform: scale(1.05);
+   background-color: rgba(83, 160, 69, 0.8);
+}
+
+.team .item {
+   margin-top: 20px;
+}
+
+.team .item .card-description{
+   font-family: 'Roboto Mono', sans-serif;
+   color: rgba(255, 255, 255, 0.7);
+   font-size: 1.9rem;
+   font-style: italic;
+   font-weight: 500;
+}
+
+#map {
+   height: 450px;  /* The height is 400 pixels */
+   width: 100%;  /* The width is the width of the web page */
+  }

@@ -34,8 +34,8 @@
     <!-- Animation -->
     <link rel="stylesheet" href="css/animate.css">
     <!-- Owl Carousel -->
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <!-- Colorbox -->
     <link rel="stylesheet" href="css/colorbox.css">
 
@@ -46,80 +46,20 @@
     <![endif]-->
 
     <style>
-        .card {
-            display: grid;
-            grid-template-columns: 250px;
-            grid-template-rows: 200px 290px 0px;
-            grid-template-areas: "image" "text" "stats";
-            border-radius: 18px;
-            background: rgba(91, 153, 211, 1);
-            /* box-shadow: 5px 5px 15px rgba(0,0,0,0.7); */
-            font-family: roboto;
-            text-align: center;
-            width: 250px;
-            
-            transition: 0.5s ease;
-            cursor: pointer;
+        .owl-dots{
+            display: none;
+        }
+        .owl-nav span{
+            font-size: 5rem;
+        }
+
+        .owl-carousel img {
+            height: 110px;
+            width: 170px;
             margin: auto;
-            }
-
-        .card-image{
-            background: url("images/team/anonymous-man.jpg");
         }
-
-        .card1 {
-            background: url("images/team/S.Khouida.png");
-        }
-        .card-text {
-            grid-area: text;
-        }
-
-        .card-image {
-            grid-area: image;
-            opacity: 0.9;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-            background-size: cover;
-        }
-
-        .card-text {
-            grid-area: text;
-            margin: 25px;
-        }
-
-        .card-text p {
-            color: rgba(58, 58, 58, 0.6);
-            font-size:15px;
-            font-weight: 300;
-        }
-
-        .card-text h2 {
-            margin-top:0px;
-            font-size:28px;
-        }
-
-        .card-text span {
-            color: #2f3542;
-            font-size: 1.6rem;
-            font-weight: 500;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-            /* box-shadow: 5px 5px 15px rgba(0,0,0,0.6); */
-            background-color: rgba(83, 160, 69, 0.8);
-        }
-
-        .item {
-            margin-top: 20px;
-        }
-
-        /* @media (min-width: 1198px){
-            .col-md-3{
-                width: 25%;
-            } 
-        } */
     </style>
+
 </head>
 <body>
     <div class="body-inner">
@@ -199,6 +139,10 @@
                                         <a href="nosReferences.html"> Nos références </a>
                                     </li>
 
+                                    <li class="menu-item ">
+                                        <a href="certifications.html"> Certifications </a>
+                                    </li>
+
                                     <li class="menu-item active">
                                         <a href="team.html">Notre équipe </a>
                                     </li>
@@ -222,7 +166,7 @@
         </nav><!--/ Navigation end -->
 
         <section id="main-container" class="main-container">
-            <div class="container" style="padding-left: 7%;">
+            <div class="container">
                 <div class="row text-center">
                     <h2 class="title">
                         Nos principaux consultants opérants dans tous les secteurs d’activités
@@ -233,52 +177,76 @@
                 <div class="row">
 
 
-                    <div class="item col-md-3 col-sm-5 text-center">
-                        <div class="card">
-                            <div class="card-image card1"></div>
-                            <div class="card-text">
-                              <h3>S.KHOUIDA</h3><br>
-                              <p><span>Global Manager</span></p>
-                              <p>Ingénieur d’état en Environnement et Sécurité Industriels de l’ENIM / Consultants Senior / formateur en QHSE</p>
+                    <div class="item col-md-offset-1 col-md-2 text-center">
+                        <div class="team-wrapper">
+                            <div class="team-img-wrapper">
+                                <div class="team-img-wrapper-hover">
+                                    <!--/ social-icons-->
+                                </div>
+                                <img alt="" src="images/team/S.Khouida.jpg" class="img-responsive">
                             </div>
-                          </div>
+                            <div class="team-content">
+                                <h3 class="ts-name">S.KHOUIDA</h3>
+                                <p class="ts-designation">Global Manager</p>
+                                <p class="ts-description">Ingénieur d’état en Environnement et Sécurité Industriels de l’ENIM / Consultants Senior / formateur en QHSE</p>
+                            </div>
+                        </div><!--/ Team wrapper end -->
                     </div><!-- Team 1 end -->
 
-                    <div class="item col-md-3 col-sm-5 text-center">
-                        <div class="card">
-                            <div class="card-image"></div>
-                            <div class="card-text">
-                                <h3>M. EL JAOUARIH</h3>
-                                <p><span>Manager QHSE</span></p>
-                                <p>Ingénieur d’état en Environnement et Sécurité Industriels de l’ENIM / Consultant Senior / formateur en QHSE / Spécialiste en VLR</p>
-                              </div>
-                          </div>
+                    <div class="item col-md-offset-1 col-md-2 text-center">
+                        <div class="team-wrapper">
+                            <div class="team-img-wrapper">
+                                <div class="team-img-wrapper-hover">
+                                    <!--/ social-icons-->
+                                </div>
+                                <img alt="" src="images/team/t1.jpg" class="img-responsive">
+                            </div>
+                            <div class="team-content">
+                                <h3 class="ts-name">-</h3>
+                                <p class="ts-designation">-</p>
+                                <p class="ts-description">-</p>
+                            </div>
+                        </div><!--/ Team wrapper end -->
                     </div><!-- Team 2 end -->
 
-                    <div class="item col-md-3 col-sm-5 text-center">
-                        <div class="card">
-                            <div class="card-image"></div>
-                            <div class="card-text">
-                                <h3>N. OULED BOUYAHYA</h3>
-                                <p><span>Responsible Financier</span></p>
-                              </div>
-                          </div>
+                    <div class="item  col-md-offset-1 col-md-2 text-center">
+                        <div class="team-wrapper">
+                            <div class="team-img-wrapper">
+                                <div class="team-img-wrapper-hover">
+                                    <!--/ social-icons-->
+                                </div>
+                                <img alt="" src="images/team/t2.png" class="img-responsive">
+                            </div>
+                            <div class="team-content">
+                                <h3 class="ts-name">-</h3>
+                                <p class="ts-designation">-</p>
+                                <p class="ts-description">-</p>
+                            </div>
+                        </div><!--/ Team wrapper end -->
                     </div><!-- Team 3 end -->
-
-                    <div class="item col-md-3 col-sm-5 text-center">
-                        <div class="card">
-                            <div class="card-image"></div>
-                            <div class="card-text">
-                                <h3>S. SEFFAR</h3><br>
-                                <p><span>Responsible Administrative</span></p>
-                              </div>
-                          </div>
-                    </div><!-- Team 4 end -->
-
-                    
                     <!-- Team slide end -->
 
+
+                    <!-- <div class="card" style="width: 18rem; background-color: grey; text-align: justify;">
+                        <img src="images/team/S.Khouida.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div> -->
+
                 </div><!-- Content row -->
+                <div class="row">
+                    <div class="owl-carousel owl-theme" id="owl-carousel">
+                        <div><img src="images/references-slider/1.png"></div>
+                        <div> <img src="images/references-slider/2.JPG"></div>
+                        <div> <img src="images/references-slider/3.png"></div>
+                        <div><img src="images/references-slider/4.PNG"></div>
+                        <div><img src="images/references-slider/5.PNG"></div>
+                        <div><img src="images/references-slider/6.PNG"></div>
+                        <div><img src="images/references-slider/7.PNG"></div>
+                      </div>
+                </div>
             </div><!-- Conatiner end -->
         </section><!-- Main container end -->
 
@@ -397,7 +365,7 @@
     <!-- Bootstrap jQuery -->
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- Owl Carousel -->
-    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel1.min.js"></script>
     <!-- Counter -->
     <script type="text/javascript" src="js/jquery.counterup.min.js"></script>
     <!-- Waypoints -->
@@ -416,6 +384,46 @@
 			    $(this).addClass("active");
 			});
 		});
-		</script>
+        </script>
+        <script>
+            // $(document).ready(function(){
+            //     $('.owl-carousel').owlCarousel();
+            // autoplay:false
+            // autoplayTimeout:5000
+            // autoplayHoverPause:false
+            var owl = $('#owl-carousel');
+            owl.owlCarousel({
+                items:6,
+                loop:true,
+                margin:10,
+                autoplay:true,
+                autoplayTimeout:1000,
+                autoplayHoverPause:true,
+
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1,
+                        nav:true
+                    },
+                    600:{
+                        items:3,
+                        nav:false
+                    },
+                    1000:{
+                        items:5,
+                        nav:true,
+                        loop:true
+                    }
+                }
+            });
+            $('.play').on('click',function(){
+                owl.trigger('play.owl.autoplay',[1000])
+            })
+            $('.stop').on('click',function(){
+                owl.trigger('stop.owl.autoplay')
+            })
+        // });
+        </script>
 </body>
 </html>
